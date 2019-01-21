@@ -1,0 +1,26 @@
+{
+  "name": "leaderboard-server",
+  "version": "1.0.0",
+  "description": "The purpose of this excercise is for you to create a pull request containing your proposal to solve the below Leaderboard Scenario as an MVP. The only requirement is that you demonstrate your skills using the technology stack commensurate to the position you applied for at Sisu Wellness. You should also include any assumptions you made and the rationale, as well as any scoping questions you feel would be necessary to properly complete the objective.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "xura // mash wimalawardana",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.3",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.4.5",
+    "sequelize": "^4.42.0",
+    "sqlite3": "^4.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
