@@ -4,6 +4,9 @@ const bodyParser = require("body-parser");
 const user = require("./routes/user");
 const mongoose = require("mongoose");
 const config = require("./configuration.json");
+const cors = require("cors");
+
+app.use(cors());
 
 mongoose.connect(config.credentials);
 

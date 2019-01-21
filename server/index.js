@@ -4,8 +4,8 @@ const validate = require("./utils/verifyConfig");
 
 if (validate(config)) {
   app.listen(config.port, () => {
-    console.log(`[Ryze] Running on Port ${config.port}`);
+    console.log(`Running on Port ${config.port}`);
   });
 } else {
-  console.error("[Ryze] Configuration is incorrect. Please read the README.md");
+  console.error("Configuration is incorrect. Please read the README.md");
 }
