@@ -18,16 +18,14 @@ const paths = [
 ];
 
 const UnAuthenticated = ({ history }) => {
-  const { pathname } = history.location;
   return (
     <div className="navigation">
       <div className="menu">
         {paths.map((item, index) => (
           <Link
             key={index}
-            className="menu-items"
+            className={item.path === "/signup" ? "menu-items-right" : "menu-items"}
             to={item.path}
-            style={{ fontWeight: pathname === item.path ? "bold" : "" }}
           >
             {" "}
             {item.value}

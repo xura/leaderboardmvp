@@ -18,8 +18,6 @@ const paths = [
 ];
 
 const Authenticated = ({ history }) => {
-  const { pathname } = history.location;
-
   return (
     <div className="navigation">
       <div className="menu">
@@ -28,7 +26,6 @@ const Authenticated = ({ history }) => {
             key={index}
             className={item.path === "/signout" ? "menu-items-right" : "menu-items"}
             to={item.path}
-            style={{ fontWeight: pathname === item.path ? "bold" : "" }}
           >
             {item.value}
           </Link>

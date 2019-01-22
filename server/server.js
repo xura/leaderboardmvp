@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const user = require("./routes/users");
+
 const mongoose = require("mongoose");
 const config = require("./configuration.json");
 const cors = require("cors");

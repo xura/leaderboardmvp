@@ -1,9 +1,18 @@
 import React, { Component } from "react";
 import * as ROUTES from "../constants/routes";
+import axios from "axios";
 import { connect } from "react-redux";
+import Loader from "../components/loader";
 
 export default Module => {
   class ComposedComponent extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        user: null
+      };
+    }
+
     protectRoute = () => {
       const { auth, history } = this.props;
       if (!auth) {
@@ -11,8 +20,21 @@ export default Module => {
       }
     };
 
+    getContext = () => {
+      axios
+        .get(`http://localhost:3000/api/user/`, {
+          headers: {
+            Authorization: this.props.auth
+          }
+        })
+        .then(response => {
+          this.setState({ user: response.data });
+        });
+    };
+
     componentDidMount() {
       this.protectRoute();
+      this.getContext();
     }
 
     componentDidUpdate() {
@@ -20,7 +42,8 @@ export default Module => {
     }
 
     render() {
-      return <Module {...this.props} />;
+      const { user } = this.state;
+      return !!user ? <Module {...this.props} user={user} /> : <Loader />;
     }
   }
 
