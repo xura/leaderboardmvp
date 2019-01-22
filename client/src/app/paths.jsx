@@ -30,6 +30,20 @@ const paths = [
       loader: () => import("../pages/dashboard"),
       loading: Loader
     })
+  },
+  {
+    path: ROUTES.SIGN_OUT,
+    component: Loadable({
+      loader: () => import("../pages/signOut"),
+      loading: Loader
+    })
+  },
+  {
+    path: ROUTES.SIGN_UP,
+    component: Loadable({
+      loader: () => import("../pages/signUp"),
+      loading: Loader
+    })
   }
 ];
 

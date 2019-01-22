@@ -2,21 +2,21 @@
   height: 80px;
   background-color: #2f3241;
   width: 100%;
-  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.06);
+  box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.178);
 }
 
 .menu-items {
-  margin-top: 20px;
   font-size: 18px;
   text-align: center;
   margin-right: 20px;
-  color: #49b675;
+  color: #9281f5;
   transition: all 0.3s;
   text-decoration: none;
+  float: left;
 }
 
 .menu-items:hover {
-  color: #3c9761;
+  color: #8470f7;
 }
 
 .menu-items:focus {
@@ -25,4 +25,22 @@
 
 .menu {
   padding: 25px;
+}
+
+.menu-items-right {
+  font-size: 18px;
+  text-align: center;
+  margin-right: 20px;
+  color: #9281f5;
+  transition: all 0.3s;
+  text-decoration: none;
+  float: right;
+}
+
+.menu-items-right:hover {
+  color: #8470f7;
+}
+
+.menu-items-right:focus {
+  text-decoration: none;
 }

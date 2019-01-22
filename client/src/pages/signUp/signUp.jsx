@@ -3,18 +3,17 @@ import { reduxForm, Field } from "redux-form";
 import { compose } from "redux";
 import { connect } from "react-redux";
 import * as actions from "../../actions";
-import "./signIn.css";
+import "./signUp.css";
 
-class Signin extends Component {
+class SignUp extends Component {
   onSubmit = formProps => {
-    this.props.signin(formProps, () => {
+    this.props.register(formProps, () => {
       this.props.history.push("/dashboard");
     });
   };
 
   componentDidMount() {
     const token = sessionStorage.getItem("token");
-
     if (!!token) {
       this.props.history.push("/dashboard");
     }
@@ -22,11 +21,10 @@ class Signin extends Component {
 
   render() {
     const { handleSubmit } = this.props;
-
     return (
       <div className="sign-in">
         <div className="forms">
-          <span> Please Sign In</span>
+          <span> Sign Up </span>
           <form onSubmit={handleSubmit(this.onSubmit)}>
             <fieldset className="redux-field">
               <Field className="input" name="email" type="text" component="input" autoComplete="none" />
@@ -42,7 +40,7 @@ class Signin extends Component {
             </fieldset>
 
             <div className="button">
-              <button className="sign-in-button">Sign In</button>
+              <button className="sign-in-button">Register</button>
             </div>
           </form>
         </div>
@@ -60,5 +58,5 @@ export default compose(
     mapStateToProps,
     actions
   ),
-  reduxForm({ form: "signin" })
-)(Signin);
+  reduxForm({ form: "register" })
+)(SignUp);

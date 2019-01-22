@@ -10,6 +10,10 @@ const paths = [
   {
     value: "dashboard",
     path: ROUTES.DASHBOARD
+  },
+  {
+    value: "sign out",
+    path: ROUTES.SIGN_OUT
   }
 ];
 
@@ -22,11 +26,10 @@ const Authenticated = ({ history }) => {
         {paths.map((item, index) => (
           <Link
             key={index}
-            className="menu-items"
+            className={item.path === "/signout" ? "menu-items-right" : "menu-items"}
             to={item.path}
             style={{ fontWeight: pathname === item.path ? "bold" : "" }}
           >
-            {" "}
             {item.value}
           </Link>
         ))}
