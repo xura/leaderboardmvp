@@ -3,6 +3,7 @@ import { reduxForm, Field } from "redux-form";
 import { compose } from "redux";
 import { connect } from "react-redux";
 import * as actions from "../../actions";
+import Page from "../../components/page";
 import "./signUp.css";
 
 class SignUp extends Component {
@@ -22,29 +23,31 @@ class SignUp extends Component {
   render() {
     const { handleSubmit } = this.props;
     return (
-      <div className="sign-in">
-        <div className="forms">
-          <span> Sign Up </span>
-          <form onSubmit={handleSubmit(this.onSubmit)}>
-            <fieldset className="redux-field">
-              <Field className="input" name="email" type="text" component="input" autoComplete="none" />
-            </fieldset>
-            <fieldset className="redux-field">
-              <Field
-                className="input"
-                name="password"
-                type="password"
-                component="input"
-                autoComplete="none"
-              />
-            </fieldset>
+      <Page>
+        <div className="sign-in">
+          <div className="forms">
+            <span> Sign Up </span>
+            <form onSubmit={handleSubmit(this.onSubmit)}>
+              <fieldset className="redux-field">
+                <Field className="input" name="email" type="text" component="input" autoComplete="none" />
+              </fieldset>
+              <fieldset className="redux-field">
+                <Field
+                  className="input"
+                  name="password"
+                  type="password"
+                  component="input"
+                  autoComplete="none"
+                />
+              </fieldset>
 
-            <div className="button">
-              <button className="sign-in-button">Register</button>
-            </div>
-          </form>
+              <div className="button">
+                <button className="sign-in-button">Register</button>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
+      </Page>
     );
   }
 }

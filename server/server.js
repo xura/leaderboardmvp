@@ -5,9 +5,10 @@ const contest = require("./routes/contests");
 const leaderboard = require("./routes/leaderboard");
 const mongoose = require("mongoose");
 const config = require("./configuration.json");
+const app = express();
+
 const cors = require("cors");
 
-const app = express();
 app.use(cors());
 
 mongoose.connect(config.credentials);

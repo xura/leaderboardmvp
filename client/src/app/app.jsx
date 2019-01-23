@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import Navigation from "../components/navigation";
+import Contest from "../pages/contest";
 import reduxThunk from "redux-thunk";
 import reducers from "../reducers";
 import paths from "./paths";
@@ -37,6 +38,7 @@ const App = () => (
           {paths.map((item, index) => {
             return <Route exact key={index} path={item.path} component={item.component} />;
           })}
+          <Route path="/contest/:id" component={Contest} />;
         </Switch>
       </div>
     </BrowserRouter>
