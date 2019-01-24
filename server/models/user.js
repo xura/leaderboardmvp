@@ -5,7 +5,8 @@ const user = mongoose.Schema({
   email: { type: String, required: true },
   password: { type: String, required: true },
   role: { type: String, default: "unassigned" },
-  subscribed: [String]
+  subscribed: [String],
+  score: { type: Number, default: 0 }
 });
 
 module.exports = mongoose.model("User", user);
