@@ -1,6 +1,7 @@
 import React from "react";
 import Animate from "react-smooth";
 import * as ANIMATIONS from "../../constants/animations";
+
 import "./page.css";
 
 const Page = ({ bordered, children }) => {

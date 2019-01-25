@@ -38,7 +38,7 @@ const App = () => (
           {paths.map((item, index) => {
             return <Route exact key={index} path={item.path} component={item.component} />;
           })}
-          <Route path="/contest/:id" component={Contest} />;
+          <Route path="/contests/:id" component={Contest} />;
         </Switch>
       </div>
     </BrowserRouter>

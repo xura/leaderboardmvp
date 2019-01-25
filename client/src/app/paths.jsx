@@ -44,6 +44,13 @@ const paths = [
       loader: () => import("../pages/signUp"),
       loading: Loader
     })
+  },
+  {
+    path: ROUTES.CONTEST,
+    component: Loadable({
+      loader: () => import("../pages/contest"),
+      loading: Loader
+    })
   }
 ];
 

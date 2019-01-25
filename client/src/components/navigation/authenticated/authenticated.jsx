@@ -4,15 +4,19 @@ import * as ROUTES from "../../../constants/routes";
 
 const paths = [
   {
-    value: "landing",
+    value: "LANDING",
     path: ROUTES.LANDING
   },
   {
-    value: "dashboard",
+    value: "DASHBOARD",
     path: ROUTES.DASHBOARD
   },
   {
-    value: "sign out",
+    value: "CONTESTS",
+    path: ROUTES.CONTEST
+  },
+  {
+    value: "SIGN OUT",
     path: ROUTES.SIGN_OUT
   }
 ];

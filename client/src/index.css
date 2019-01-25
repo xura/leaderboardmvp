@@ -17,3 +17,9 @@ input:focus {
   font-weight: bold;
   text-align: center;
 }
+
+.ant-btn:hover,
+.ant-btn:focus {
+  border-color: #9281f5 !important;
+  color: #9281f5 !important;
+}
